@@ -50,7 +50,42 @@ mvn test -Dsurefire.suiteXmlFiles=testng.xml
 📸 **Pipeline Execution** <img width="1262" src="https://github.com/PramodDutta/APIAutomationRestAssured/assets/1409610/2d58bf82-0ffb-4fcb-a2d9-cf26920fa7b5">
 
 ---
-
+📐 Framework Architecture Overview
+API Automation Framework (Rest Assured + Java)
+│
+├── src/test/java
+│   ├── base
+│   │   └── BaseTest
+│   │       └── Common setup (Base URI, Auth, Config)
+│   │
+│   ├── tests
+│   │   ├── CreateBookingTest
+│   │   ├── GetBookingTest
+│   │   ├── UpdateBookingTest
+│   │   └── DeleteBookingTest
+│   │
+│   ├── payload
+│   │   └── POJOs
+│   │       ├── BookingRequest
+│   │       └── BookingResponse
+│   │
+│   ├── utils
+│   │   ├── ConfigReader
+│   │   ├── ExcelUtil
+│   │   └── TokenManager
+│   │
+│   └── listeners
+│       └── AllureTestListener
+│
+├── src/test/resources
+│   ├── testng.xml
+│   ├── testng-integration.xml
+│   ├── log4j2.xml
+│   └── testdata
+│       └── bookingData.json
+│
+├── pom.xml
+└── README.md
 ## ⚙️ Maven Configuration (pom.xml)
 
 ```xml
